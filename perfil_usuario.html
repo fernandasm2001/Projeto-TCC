@@ -75,7 +75,30 @@
 
                             </div>
 
-                            <div class="btn-group dropstart">
+                            <div class="d-none d-lg-block btn-group dropstart">
+
+                                <button class="btn btn-dark me-2 dropdown-toggle" data-bs-toggle="dropdown" type="button">
+                                    <i class="fa-solid fa-circle-user fa-2xl" style="color: #FFD43B;"></i>
+                                </button>
+
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li >
+                                        <a href="perfil_usuario.html"class="dropdown-item">Perfil</a>
+                                    </li>
+                                    <li >
+                                        <a href="perfil_usuario.html"class="dropdown-item">Histórico</a>
+                                    </li>
+                                    <li >
+                                        <a href="perfil_usuario.html"class="dropdown-item">Pagamentos</a>
+                                    </li>
+                                    <li >
+                                        <a href="home.html"class="dropdown-item">sair</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <div class="d-lg-none btn-group dropend">
 
                                 <button class="btn btn-dark me-2 dropdown-toggle" data-bs-toggle="dropdown" type="button">
                                     <i class="fa-solid fa-circle-user fa-2xl" style="color: #FFD43B;"></i>
@@ -115,10 +138,20 @@
 
                 <div class="row">
 
-                    <div class="col-4 bg-warning rounded">
-                        <div class="d-flex justify-content-center">
-                            <img src="IMG/exemplo_perfil.jpg" alt="" class="img-fluid mt-3 shadow-lg" style="border-radius: 50%;height: 300px; width: 300px;object-fit: cover; margin: 3px solid black;">
+                    <div class="col-lg-4 bg-warning rounded">
+                        <div class="d-flex justify-content-center mt-3">
+
+                            <div style="width: 300px; height: 300px;">
+
+                                <div style="border-radius: 50%;  width: 100%; height: 100px; margin: 3px solid black;overflow: hidden;position: relative; padding-top: 100%;background-color: aqua;">
+                                    <img src="IMG/exemplo_perfil.jpg" alt="" class=" " style="object-fit: cover;width: 100%; height: 100%; position:absolute;top: 0; left: 0; ">
+                                </div>
+
+                            </div>
+
+          
                         </div>
+                        
 
                         <div class="d-flex justify-content-center mt-2">
                                    
@@ -127,51 +160,60 @@
 
                         <div class="d-flex justify-content-center">
                                    
-                            <p class="text-dark" style="font-size: larger; margin-top: -10px;">usuario@gmail.com</p>
+                            <h6 class="text-dark " style=" margin-top: -10px;">usuario@gmail.com</h6>
 
                         </div>
+                            
+                        <ul style="list-style: none;" class="d-none d-lg-block mt-4">
+                            <li>
+                                <a href="" style="text-decoration: none;font-size: 23px;" class="link-dark icon-link">
+                                    <i class="fa-solid fa-address-card fa-lg"></i>
+                                    Perfil
+                                </a>
+                            </li>
 
-                        <div class="d-flex">
+                            <li class="mt-2">
+                                <a href="" style="text-decoration: none;font-size: 23px;" class="link-dark">
+                                    <i class="fa-regular fa-rectangle-list fa-lg"></i>
+                                    Histórico
+                                </a>
+                            </li>
 
-                            <div class="d-flex mt-3 ms-2 mb-4" style="height: 200px;">
-                                <div class="vr"></div>
+                            <li class="mt-2">
+                                <a href="" style="text-decoration: none;font-size: 23px;" class="link-dark">
+                                    <i class="fa-regular fa-credit-card fa-lg"></i>
+                                    Pagamentos
+                                </a>
+                            </li>
+
+                            <li class="mt-2">
+                                <a href=""  style="text-decoration: none;font-size: 23px;" class="link-dark fonte_opcoes_perfil">
+                                    <i class="fa-solid fa-door-open fa-lg"></i>
+                                    Sair
+                                </a>
+                            </li>
+
+                        </ul>
+
+                        <div class="d-flex justify-content-center mb-3">
+                            <div class="d-lg-none mt-4 btn-group" role="group" >
+
+                                <input type="radio" class="btn-check" autocomplete="off" checked id="perfil" name="menu_perfil">
+                                <label class="btn btn-dark" for="perfil">Perfil</label>
+
+                                <input type="radio" class="btn-check" autocomplete="off"  id="historico" name="menu_perfil">
+                                <label class="btn btn-dark" for="historico">Histórico</label>
+                                
+                                <input type="radio" class="btn-check" autocomplete="off"  id="pagamentos" name="menu_perfil">
+                                <label class="btn btn-dark" for="pagamentos">Pagamentos</label>
+                                
                             </div>
-
-                            <div class="mt-4">
-                                <ul style="list-style: none;">
-                                    <li>
-                                        <a href="" style="text-decoration: none;font-size: 23px;" class="link-dark icon-link">
-                                            <i class="fa-solid fa-address-card fa-lg"></i>
-                                            Perfil
-                                        </a>
-                                    </li>
-    
-                                    <li class="mt-2">
-                                        <a href="" style="text-decoration: none;font-size: 23px;" class="link-dark">
-                                            <i class="fa-regular fa-rectangle-list fa-lg"></i>
-                                            Histórico
-                                        </a>
-                                    </li>
-    
-                                    <li class="mt-2">
-                                        <a href="" style="text-decoration: none;font-size: 23px;" class="link-dark">
-                                            <i class="fa-regular fa-credit-card fa-lg"></i>
-                                            Pagamentos
-                                        </a>
-                                    </li>
-    
-                                    <li class="mt-2">
-                                        <a href="" style="text-decoration: none;font-size: 23px;" class="link-dark">
-                                            <i class="fa-solid fa-door-open fa-lg"></i>
-                                            Sair
-                                        </a>
-                                    </li>
-    
-                                </ul>
-                            </div>
-
                         </div>
+                                
+                    </div>
 
+                    <div class="col-lg-8">
+                        aaaaaaaa
                     </div>
 
                 </div>

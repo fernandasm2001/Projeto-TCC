@@ -6,3 +6,13 @@
 #informacoes_livro_cliente .container .mt-4 .card p {
     margin-bottom: 0px;
 }
+/*pefil_usuario*/
+/*
+.fonte_opcoes_perfil{
+    font-size: 1.5vw;
+}
+@media(max-width:800px){
+    .fonte_opcoes_perfil{
+        font-size: 20px;
+    }
+}*/
