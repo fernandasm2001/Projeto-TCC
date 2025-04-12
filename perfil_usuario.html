@@ -46,13 +46,13 @@
 
                                         <li class="nav-item">
         
-                                            <a href="home_usuario_logado.html" class="nav-link active">Página Inicial</a>
+                                            <a href="home_usuario_logado.html" class="nav-link active" >Página Inicial</a>
         
                                         </li>
         
                                         <li class="nav-item">
         
-                                            <a href="catalogo.html" class="nav-link">Catálogo de livros</a>
+                                            <a href="catalogo.html" class="nav-link" >Catálogo de livros</a>
         
                                         </li>
         
@@ -86,10 +86,10 @@
                                         <a href="perfil_usuario.html"class="dropdown-item">Perfil</a>
                                     </li>
                                     <li >
-                                        <a href="perfil_usuario.html"class="dropdown-item">Histórico</a>
+                                        <a type="button" class="dropdown-item" onclick="mostrarPagina('paginaHistorico')">Histórico</a>
                                     </li>
                                     <li >
-                                        <a href="perfil_usuario.html"class="dropdown-item">Pagamentos</a>
+                                        <a type="button" class="dropdown-item" onclick="mostrarPagina('paginaPagamentos')">Pagamentos</a>
                                     </li>
                                     <li >
                                         <a href="home.html"class="dropdown-item">sair</a>
@@ -106,13 +106,13 @@
 
                                 <ul class="dropdown-menu dropdown-menu-dark">
                                     <li >
-                                        <a href="perfil_usuario.html"class="dropdown-item">Perfil</a>
+                                        <a href="perfil_usuario.html"class="dropdown-item" >Perfil</a>
                                     </li>
                                     <li >
-                                        <a href="perfil_usuario.html"class="dropdown-item">Histórico</a>
+                                        <a class="dropdown-item" onclick="mostrarPagina('paginaHistorico')">Histórico</a>
                                     </li>
                                     <li >
-                                        <a href="perfil_usuario.html"class="dropdown-item">Pagamentos</a>
+                                        <a class="dropdown-item"  onclick="mostrarPagina('paginaPagamentos')">Pagamentos</a>
                                     </li>
                                     <li >
                                         <a href="home.html"class="dropdown-item">sair</a>
@@ -133,12 +133,12 @@
         </header>
 
         <!--CORPO-->
-        <section style="margin-top: 70px;">
-            <div class="container rounded shadow">
+        <section class="" style="margin-top: 70px;">
+            <div class="container rounded shadow bg-warning">
 
                 <div class="row">
 
-                    <div class="col-lg-4 bg-warning rounded">
+                    <div class="col-lg-4  rounded">
                         <div class="d-flex justify-content-center mt-3">
 
                             <div style="width: 300px; height: 300px;">
@@ -166,28 +166,28 @@
                             
                         <ul style="list-style: none;" class="d-none d-lg-block mt-4">
                             <li>
-                                <a href="" style="text-decoration: none;font-size: 23px;" class="link-dark icon-link">
+                                <a type="button" style="text-decoration: none;font-size: 23px;" class="link-dark icon-link" onclick="mostrarPagina('paginaPerfil')">
                                     <i class="fa-solid fa-address-card fa-lg"></i>
                                     Perfil
                                 </a>
                             </li>
 
                             <li class="mt-2">
-                                <a href="" style="text-decoration: none;font-size: 23px;" class="link-dark">
+                                <a type="button" style="text-decoration: none;font-size: 23px;" class="link-dark" onclick="mostrarPagina('paginaHistorico')">
                                     <i class="fa-regular fa-rectangle-list fa-lg"></i>
                                     Histórico
                                 </a>
                             </li>
 
                             <li class="mt-2">
-                                <a href="" style="text-decoration: none;font-size: 23px;" class="link-dark">
+                                <a type="button" style="text-decoration: none;font-size: 23px;" class="link-dark" onclick="mostrarPagina('paginaPagamentos')">
                                     <i class="fa-regular fa-credit-card fa-lg"></i>
                                     Pagamentos
                                 </a>
                             </li>
 
                             <li class="mt-2">
-                                <a href=""  style="text-decoration: none;font-size: 23px;" class="link-dark fonte_opcoes_perfil">
+                                <a href="home.html" style="text-decoration: none;font-size: 23px;" class="link-dark fonte_opcoes_perfil">
                                     <i class="fa-solid fa-door-open fa-lg"></i>
                                     Sair
                                 </a>
@@ -198,13 +198,13 @@
                         <div class="d-flex justify-content-center mb-3">
                             <div class="d-lg-none mt-4 btn-group" role="group" >
 
-                                <input type="radio" class="btn-check" autocomplete="off" checked id="perfil" name="menu_perfil">
+                                <input type="radio" class="btn-check" autocomplete="off" checked id="perfil" name="menu_perfil" onclick="mostrarPagina('paginaPerfil')">
                                 <label class="btn btn-dark" for="perfil">Perfil</label>
 
-                                <input type="radio" class="btn-check" autocomplete="off"  id="historico" name="menu_perfil">
+                                <input type="radio" class="btn-check" autocomplete="off"  id="historico" name="menu_perfil" onclick="mostrarPagina('paginaHistorico')">
                                 <label class="btn btn-dark" for="historico">Histórico</label>
                                 
-                                <input type="radio" class="btn-check" autocomplete="off"  id="pagamentos" name="menu_perfil">
+                                <input type="radio" class="btn-check" autocomplete="off"  id="pagamentos" name="menu_perfil" onclick="mostrarPagina('paginaPagamentos')">
                                 <label class="btn btn-dark" for="pagamentos">Pagamentos</label>
                                 
                             </div>
@@ -212,8 +212,181 @@
                                 
                     </div>
 
-                    <div class="col-lg-8">
-                        aaaaaaaa
+                    <!--PAGINA PERFIL-->
+
+                    <div class="col-lg-8" id="paginaPerfil" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                        <p class="fs-6 text-body-secondary fw-light ">id de usuário: 12345678</p>
+                        
+                        <div class="border bg-light mt-5 rounded shadow">
+
+                            <div class="row p-2">
+
+                                <div class="col-lg-6 fs-5 ">
+                                <span class="fw-bold ">Nome:</span> Victoria da Silva Moreira
+                                </div>
+                                <div class="col-lg-6 fs-5 ">
+                                    <span class="fw-bold ">E-mail:</span> victoria_silva@gmail.com
+                                </div>
+                                <div class="col-lg-3 fs-5 mt-4">
+                                    <span class="fw-bold ">Data de Nascimento:</span> 12/03/2000
+                                </div>
+                                <div class="col-lg-3 fs-5 mt-4">
+                                    <span class="fw-bold ">Data de Registro:</span> 08/04/2025
+                                </div>
+                                <div class="col-lg-6 fs-5 mt-4">
+                                    <span class="fw-bold ">Cel:</span> (11) 9 9083-4712
+                                </div>
+                                <div class="col-lg-6 fs-5 mt-4">
+                                    <span class="fw-bold ">Situação:</span> Regular
+                                </div>
+
+                            </div>
+                            
+                        </div>
+
+                        <div class="border bg-light mt-5 rounded shadow">
+
+                            <div class="row p-2">
+
+                                <div class="col-lg-12 fs-5 "  style="text-align: justify;">
+                                    <span class="fw-bold ">Descrição:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare, velit at rutrum lobortis, leo dolor sagittis sapien, eu commodo ante lacus et dolor. Praesent blandit lobortis ex, at faucibus ipsum. Nulla aliquet dui sem, id vestibulum augue pharetra quis. Aenean interdum tempor nulla eu porta. Proin pellentesque lectus at nunc semper, quis feugiat enim varius. Curabitur erat erat, iaculis eu ante non, aliquet feugiat mauris. Aliquam ut laoreet ante, nec laoreet ex. Quisque malesuada ipsum eu justo venenatis laoreet. Maecenas suscipit erat ut magna scelerisque gravida.
+                                </div>
+
+                            </div>
+                            
+                        </div>
+
+                        <div class="d-flex justify-content-end mt-5">
+                            <button class="btn btn-dark" type="button">Alterar dados</button>
+                        </div>
+                        
+                    </div>
+
+                    <!--PAGINA HISTORICO-->
+
+
+                    <div class="col-lg-8 mt-5" id="paginaHistorico" style="overflow: scroll; display: none;">
+
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Codigo do livro</th>
+                                        <th>Nome do livro</th>
+                                        <th>Data do emprestimo</th>
+                                        <th>Data de marcada</th>
+                                        <th>Data de devolução</th>
+                                        <th>Status</th>
+                                        <th>Dias de atraso</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>00000000</td>
+                                        <td>Livro 1</td>
+                                        <td>11/04/2025</td>
+                                        <td>11/04/2025</td>
+                                        <td>11/04/2025</td>
+                                        <td>Atrasado</td>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00000000</td>
+                                        <td>Livro 1</td>
+                                        <td>11/04/2025</td>
+                                        <td>11/04/2025</td>
+                                        <td>11/04/2025</td>
+                                        <td>Atrasado</td>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00000000</td>
+                                        <td>Livro 1</td>
+                                        <td>11/04/2025</td>
+                                        <td>11/04/2025</td>
+                                        <td>11/04/2025</td>
+                                        <td>Atrasado</td>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00000000</td>
+                                        <td>Livro 1</td>
+                                        <td>11/04/2025</td>
+                                        <td>11/04/2025</td>
+                                        <td>11/04/2025</td>
+                                        <td>Atrasado</td>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00000000</td>
+                                        <td>Livro 1</td>
+                                        <td>11/04/2025</td>
+                                        <td>11/04/2025</td>
+                                        <td>11/04/2025</td>
+                                        <td>Atrasado</td>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00000000</td>
+                                        <td>Livro 1</td>
+                                        <td>11/04/2025</td>
+                                        <td>11/04/2025</td>
+                                        <td>11/04/2025</td>
+                                        <td>Atrasado</td>
+                                        <td>10</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+
+                    <!--PAGINA PAGAMENTO-->
+
+                    <div class="col-lg-8 mt-5" id="paginaPagamentos" style="display: none;">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Codigo do pagamento</th>
+                                        <th>Valor</th>
+                                        <th>Motivo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>00000000</td>
+                                        <td>Livro 1</td>
+                                        <td>11/04/2025</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00000000</td>
+                                        <td>Livro 1</td>
+                                        <td>11/04/2025</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00000000</td>
+                                        <td>Livro 1</td>
+                                        <td>11/04/2025</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00000000</td>
+                                        <td>Livro 1</td>
+                                        <td>11/04/2025</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00000000</td>
+                                        <td>Livro 1</td>
+                                        <td>11/04/2025</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00000000</td>
+                                        <td>Livro 1</td>
+                                        <td>11/04/2025</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
 
                 </div>
@@ -258,6 +431,24 @@
             </div>
         </section>
         
+        <script>
+            function mostrarPagina(idPagina){
+                const paginas = document.querySelectorAll('div[id^="pagina"]');
+                paginas.forEach(pagina => {
+                    pagina.style.display = 'none'
+                })
+
+                const pagina = document.getElementById(idPagina);
+                if(pagina){ 
+                    pagina.style.display = 'block';
+                } 
+            }
+
+            document.addEventListener('DOMContentLoaded', function(){
+                mostrarPagina('paginaPerfil');
+            });
+        </script>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/28468a4254.js" crossorigin="anonymous"></script>
 
